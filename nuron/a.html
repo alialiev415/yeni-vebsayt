@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sayt</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<style>
+    body {
+        padding-top: 90px; /* FIXED NAVBAR ÜÇÜN */
+        background: #0f111a;
+        color: white;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .content {
+        width: 80%;
+        margin: auto;
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    /* ----------------- NURON UI EXTRA CSS ----------------- */
+    .menu-hover:hover {
+        color: #0a84ff !important;
+        transition: 0.3s;
+    }
+    .search-box {
+        background: #1a1c25;
+        padding: 6px 12px;
+        border-radius: 16px;
+        transition: 0.3s;
+    }
+    .search-box:hover {
+        background: #232634;
+    }
+    .wallet-btn {
+        padding: 8px 18px;
+        border-radius: 14px;
+        transition: 0.3s;
+    }
+    .wallet-btn:hover {
+        background-color: #006bda !important;
+    }
+    .icon-circle {
+        width: 42px;
+        height: 42px;
+        background: #1a1c25;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.25s;
+        cursor: pointer;
+    }
+    .icon-circle:hover {
+        background: #262a39;
+    }
+</style>
+
+</head>
+<body>
+
+<!-- PREMIUM NURON UI NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top shadow-lg"
+     style="background: rgba(15, 17, 26, 0.8); backdrop-filter: blur(12px); padding: 14px 0;">
+  <div class="container-fluid">
+
+    <!-- LOGO -->
+    <a class="navbar-brand d-flex align-items-center text-white fw-bold" href="#">
+      <div style="background:#0a84ff; padding:8px 14px; border-radius:14px; font-weight:700; font-size:22px;">
+        N
+      </div>
+      <span class="ms-2" style="font-size:22px;">nuron</span>
+    </a>
+
+    <!-- TOGGLER -->
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- MENUS -->
+    <div class="collapse navbar-collapse" id="navbarMain">
+
+      <ul class="navbar-nav ms-4 mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link text-white menu-hover" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white menu-hover" href="#haqqinda">Haqqında</a></li>
+        <li class="nav-item"><a class="nav-link text-white menu-hover" href="#">Explore</a></li>
+        <li class="nav-item"><a class="nav-link text-white menu-hover" href="#">Pages</a></li>
+        <li class="nav-item"><a class="nav-link text-white menu-hover" href="#">Blog</a></li>
+        <li class="nav-item"><a class="nav-link text-white menu-hover" href="#">Contact</a></li>
+      </ul>
+
+      <!-- RIGHT SIDE -->
+      <div class="ms-auto d-flex align-items-center">
+
+        <!-- SEARCH -->
+        <div class="d-flex align-items-center me-3 search-box">
+          <input type="text" class="form-control bg-transparent text-white border-0"
+                 placeholder="Search Here" style="width:190px; border-radius:20px; box-shadow:none;">
+          <i class="bi bi-search text-white" style="font-size:20px;"></i>
+        </div>
+
+        <!-- WALLET BUTTON -->
+        <button class="btn btn-primary fw-bold me-3 wallet-btn">
+          Wallet connect
+        </button>
+
+        <!-- NOTIFICATION -->
+        <div class="position-relative me-3 icon-circle">
+          <i class="bi bi-bell text-white" style="font-size:22px;"></i>
+          <span class="badge bg-info rounded-circle position-absolute top-0 start-100 translate-middle"
+                style="font-size:10px;">6</span>
+        </div>
+
+        <!-- DARK MODE ICON -->
+        <div class="icon-circle">
+          <i class="bi bi-brightness-high text-white" style="font-size:22px;"></i>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</nav>
+<!-- HERO SECTION - DIVE INTO NFTs -->
+<div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); padding: 120px 0; text-align: center; position: relative; overflow: hidden;">
+    
+    <!-- Decorative Background Shapes -->
+    <div style="position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(138,43,226,0.15) 0%, transparent 70%); border-radius: 50%; top: -200px; left: -100px;"></div>
+    <div style="position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(75,0,130,0.2) 0%, transparent 70%); border-radius: 50%; bottom: -150px; right: -80px;"></div>
+    
+    <div class="container" style="position: relative; z-index: 2;">
+        
+        <!-- Title Section -->
+        <p style="color: #0a84ff; font-size: 14px; font-weight: 700; letter-spacing: 3px; margin-bottom: 20px;">NURON MARKETPLACE</p>
+        
+        <h1 class="text-white fw-bold mb-4" style="font-size: 56px; line-height: 1.2;">
+            Dive into NFTs marketplace<br>with a relevant Product
+        </h1>
+        
+        <p style="color: #b0b0c3; font-size: 18px; max-width: 700px; margin: 0 auto 40px auto; line-height: 1.7;">
+            Unit of data stored on a digital ledger, called a blockchain, that certifies a digital asset to be unique and therefore not interchangeable
+        </p>
+        
+        <!-- Explore Button -->
+        <a href="#" style="display: inline-block; background: #0a84ff; color: white; padding: 16px 48px; border-radius: 12px; font-weight: 600; font-size: 16px; text-decoration: none; transition: 0.3s; box-shadow: 0 8px 20px rgba(10, 132, 255, 0.3);">
+            Explore
+        </a>
+        
+        <!-- Crypto Icons -->
+        <div class="d-flex justify-content-center align-items-center mt-5" style="gap: 20px; flex-wrap: wrap;">
+            
+            <!-- Icon 1 -->
+            <div style="width: 60px; height: 60px; background: #1a1c25; border: 1px solid #2a2d3a; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: 0.3s; cursor: pointer;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#0a84ff"/>
+                    <path d="M2 17L12 22L22 17" stroke="#0a84ff" stroke-width="2"/>
+                </svg>
+            </div>
+            
+            <!-- Icon 2 -->
+            <div style="width: 60px; height: 60px; background: #1a1c25; border: 1px solid #2a2d3a; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: 0.3s; cursor: pointer;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L4 12L12 16L20 12L12 2Z" fill="#ff4444"/>
+                    <path d="M12 16L4 12L12 22L20 12L12 16Z" fill="#ff6b6b"/>
+                </svg>
+            </div>
+            
+            <!-- Icon 3 -->
+            <div style="width: 60px; height: 60px; background: #1a1c25; border: 1px solid #2a2d3a; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: 0.3s; cursor: pointer;">
+                <div style="width: 32px; height: 32px; background: #00d4ff; border-radius: 4px; position: relative;">
+                    <div style="position: absolute; width: 8px; height: 24px; background: #001a33; top: 4px; left: 12px;"></div>
+                </div>
+            </div>
+            
+            <!-- Icon 4 -->
+            <div style="width: 60px; height: 60px; background: #1a1c25; border: 1px solid #2a2d3a; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: 0.3s; cursor: pointer;">
+                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #ff8c00, #ffa500); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 18px;">
+                    🦊
+                </div>
+            </div>
+            
+            <!-- Icon 5 -->
+            <div style="width: 60px; height: 60px; background: #1a1c25; border: 1px solid #2a2d3a; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: 0.3s; cursor: pointer;">
+                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #6366f1, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <div style="width: 16px; height: 16px; border: 3px solid white; border-radius: 50%;"></div>
+                </div>
+            </div>
+            
+            <!-- Icon 6 -->
+            <div style="width: 60px; height: 60px; background: #1a1c25; border: 1px solid #2a2d3a; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: 0.3s; cursor: pointer;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" fill="#7c3aed"/>
+                </svg>
+            </div>
+            
+            <!-- Icon 7 -->
+            <div style="width: 60px; height: 60px; background: #1a1c25; border: 1px solid #2a2d3a; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: 0.3s; cursor: pointer;">
+                <div style="width: 28px; height: 28px; border: 3px solid #ec4899; transform: rotate(45deg); border-radius: 4px;"></div>
+            </div>
+            
+            <!-- Icon 8 -->
+            <div style="width: 60px; height: 60px; background: #1a1c25; border: 1px solid #2a2d3a; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: 0.3s; cursor: pointer;">
+                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #0ea5e9, #06b6d4); border-radius: 50%; border: 3px solid white;"></div>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+<style>
+    /* Icon Hover Effect */
+    [style*="width: 60px; height: 60px"]:hover {
+        transform: translateY(-5px);
+        background: #2a2d3a !important;
+        box-shadow: 0 8px 16px rgba(10, 132, 255, 0.2);
+    }
+</style>
+<!-- CATEGORIES SECTION -->
+<div class="container mt-5 mb-5">
+    <div class="row g-3">
+        
+        <!-- Art -->
+        <div class="col-lg-2 col-md-4 col-sm-6">
+            <div style="background: #1a1c25; padding: 40px 20px; border-radius: 16px; text-align: center; border: 1px solid #2a2d3a; transition: 0.3s; cursor: pointer;">
+                <i class="bi bi-image" style="font-size: 48px; color: #0a84ff; margin-bottom: 16px;"></i>
+                <h6 class="text-white fw-bold mb-0">Art</h6>
+            </div>
+        </div>
+
+        <!-- Music -->
+        <div class="col-lg-2 col-md-4 col-sm-6">
+            <div style="background: #1a1c25; padding: 40px 20px; border-radius: 16px; text-align: center; border: 1px solid #2a2d3a; transition: 0.3s; cursor: pointer;">
+                <i class="bi bi-music-note-beamed" style="font-size: 48px; color: #0a84ff; margin-bottom: 16px;"></i>
+                <h6 class="text-white fw-bold mb-0">Music</h6>
+            </div>
+        </div>
+
+        <!-- Digital Worlds -->
+        <div class="col-lg-2 col-md-4 col-sm-6">
+            <div style="background: #1a1c25; padding: 40px 20px; border-radius: 16px; text-align: center; border: 1px solid #2a2d3a; transition: 0.3s; cursor: pointer;">
+                <i class="bi bi-map" style="font-size: 48px; color: #0a84ff; margin-bottom: 16px;"></i>
+                <h6 class="text-white fw-bold mb-0">Digital Worlds</h6>
+            </div>
+        </div>
+
+        <!-- Domain Name -->
+        <div class="col-lg-2 col-md-4 col-sm-6">
+            <div style="background: #1a1c25; padding: 40px 20px; border-radius: 16px; text-align: center; border: 1px solid #2a2d3a; transition: 0.3s; cursor: pointer;">
+                <i class="bi bi-search" style="font-size: 48px; color: #0a84ff; margin-bottom: 16px;"></i>
+                <h6 class="text-white fw-bold mb-0">Domain Name</h6>
+            </div>
+        </div>
+
+        <!-- Collectibles -->
+        <div class="col-lg-2 col-md-4 col-sm-6">
+            <div style="background: #1a1c25; padding: 40px 20px; border-radius: 16px; text-align: center; border: 1px solid #2a2d3a; transition: 0.3s; cursor: pointer;">
+                <i class="bi bi-grid-3x3" style="font-size: 48px; color: #0a84ff; margin-bottom: 16px;"></i>
+                <h6 class="text-white fw-bold mb-0">Collectibles</h6>
+            </div>
+        </div>
+
+        <!-- Trending Cards -->
+        <div class="col-lg-2 col-md-4 col-sm-6">
+            <div style="background: #1a1c25; padding: 40px 20px; border-radius: 16px; text-align: center; border: 1px solid #2a2d3a; transition: 0.3s; cursor: pointer;">
+                <i class="bi bi-activity" style="font-size: 48px; color: #0a84ff; margin-bottom: 16px;"></i>
+                <h6 class="text-white fw-bold mb-0">Trending Cards</h6>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- TOP COLLECTION SECTION -->
+<div class="container mt-5 mb-5">
+    
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-white fw-bold mb-0">Top Collection</h2>
+        <a href="#" style="color: #8a8aa0; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+            VIEW ALL <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+
+    <!-- Collections Grid -->
+    <div class="row g-4">
+
+        <!-- Collection 1 - Cubic Trad -->
+        <div class="col-lg-3 col-md-6">
+            <div style="background: #1a1c25; border-radius: 16px; overflow: hidden; border: 1px solid #2a2d3a; transition: 0.3s; cursor: pointer;">
+                
+                <!-- Main Image -->
+                <div style="position: relative; height: 280px; background: linear-gradient(135deg, #0f0f0f, #1a1a1a); display: flex; align-items: center; justify-content: center;">
+                    <div style="width: 150px; height: 150px; background: linear-gradient(135deg, #6b7280, #9ca3af); clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);"></div>
+                </div>
+
+                <!-- Small Images Row -->
+                <div class="d-flex" style="gap: 2px;">
+                    <div style="flex: 1; height: 100px; background: linear-gradient(135deg, #1f2937, #111827);"></div>
+                    <div style="flex: 1; height: 100px; background: linear-gradient(135deg, #1e40af, #1e3a8a); display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #ef4444, #dc2626); border-radius: 12px;"></div>
+                    </div>
+                    <div style="flex: 1; height: 100px; background: linear-gradient(135deg, #0e7490, #155e75);"></div>
+                </div>
+
+                <!-- Info -->
+                <div style="padding: 20px;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-white fw-bold mb-0">Cubic Trad</h5>
+                        <span style="color: #8a8aa0; font-size: 14px;">27 Items</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Collection 2 - Diamond Dog -->
+        <div class="col-lg-3 col-md-6">
+            <div style="background: #1a1c25; border-radius: 16px; overflow: hidden; border: 1px solid #2a2d3a; transition: 0.3s; cursor: pointer;">
+                
+                <!-- Main Image -->
+                <div style="position: relative; height: 280px; background: linear-gradient(135deg, #1f2937, #111827); display: flex; align-items: center; justify-content: center;">
+                    <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #4b5563, #6b7280); border-radius: 50%; position: relative;">
+                        <div style="position: absolute; width: 80px; height: 80px; background: #1f2937; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+                    </div>
+                </div>
+
+                <!-- Small Images Row -->
+                <div class="d-flex" style="gap: 2px;">
+                    <div style="flex: 1; height: 100px; background: linear-gradient(135deg, #7c2d12, #991b1b);"></div>
+                    <div style="flex: 1; height: 100px; background: linear-gradient(135deg, #374151, #1f2937); display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #dc2626, #991b1b); border-radius: 50%;"></div>
+                    </div>
+                    <div style="flex: 1; height: 100px; background: linear-gradient(135deg, #831843, #be185d);"></div>
+                </div>
+
+                <!-- Info -->
+                <div style="padding: 20px;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-white fw-bold mb-0">Diamond Dog</h5>
+                        <span style="color: #8a8aa0; font-size: 14px;">20 Items</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Collection 3 - Morgan11 -->
+        <div class="col-lg-3 col-md-6">
+            <div style="background: #1a1c25; border-radius: 16px; overflow: hidden; border: 1px solid #2a2d3a; transition: 0.3s; cursor: pointer;">
+                
+                <!-- Main Image -->
+                <div style="position: relative; height: 280px; background: linear-gradient(135deg, #422006, #713f12); display: flex; align-items: center; justify-content: center;">
+                    <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #f3f4f6, #e5e7eb); transform: rotate(45deg); position: relative;">
+                        <div style="position: absolute; width: 50px; height: 50px; background: linear-gradient(135deg, #eab308, #ca8a04); top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+                    </div>
+                </div>
+
+                <!-- Small Images Row -->
+                <div class="d-flex" style="gap: 2px;">
+                    <div style="flex: 1; height: 100px; background: linear-gradient(135deg, #0c4a6e, #075985);"></div>
+                    <div style="flex: 1; height: 100px; background: linear-gradient(135deg, #ea580c, #c2410c); display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #fbbf24, #f59e0b); border-radius: 50%;"></div>
+                    </div>
+                    <div style="flex: 1; height: 100px; background: linear-gradient(135deg, #7c3aed, #6d28d9);"></div>
+                </div>
+
+                <!-- Info -->
+                <div style="padding: 20px;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-white fw-bold mb-0">Morgan11</h5>
+                        <span style="color: #8a8aa0; font-size: 14px;">15 Items</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Collection 4 - Orthogon#720 -->
+        <div class="col-lg-3 col-md-6">
+            <div style="background: #1a1c25; border-radius: 16px; overflow: hidden; border: 1px solid #2a2d3a; transition: 0.3s; cursor: pointer;">
+                
+                <!-- Main Image -->
+                <div style="position: relative; height: 280px; background: linear-gradient(135deg, #475569, #64748b); display: flex; align-items: center; justify-content: center;">
+                    <div style="width: 100px; height: 120px; background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 50%; position: relative;">
+                        <div style="position: absolute; width: 60px; height: 60px; background: #334155; border-radius: 50%; top: 10px; left: 50%; transform: translateX(-50%);"></div>
+                    </div>
+                </div>
+
+                <!-- Small Images Row -->
+                <div class="d-flex" style="gap: 2px;">
+                    <div style="flex: 1; height: 100px; background: linear-gradient(135deg, #a16207, #ca8a04);"></div>
+                    <div style="flex: 1; height: 100px; background: linear-gradient(135deg, #1e40af, #1e3a8a); display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #fbbf24, #f59e0b); border-radius: 8px;"></div>
+                    </div>
+                    <div style="flex: 1; height: 100px; background: linear-gradient(135deg, #7c3aed, #6d28d9);"></div>
+                </div>
+
+                <!-- Info -->
+                <div style="padding: 20px;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-white fw-bold mb-0">Orthogon#720</h5>
+                        <span style="color: #8a8aa0; font-size: 14px;">10 Items</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<style>
+    /* Category Card Hover */
+    [style*="background: #1a1c25; padding: 40px"]:hover {
+        transform: translateY(-5px);
+        background: #2a2d3a !important;
+        border-color: #0a84ff !important;
+    }
+
+    /* Collection Card Hover */
+    [style*="background: #1a1c25; border-radius: 16px; overflow: hidden"]:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(10, 132, 255, 0.2);
+    }
+</style>
+<!-- CREATE AND SELL YOUR NFTs SECTION -->
+<div class="container mt-5 mb-5">
+    
+    <h2 class="text-white fw-bold mb-5">Create and sell your NFTs</h2>
+
+    <div class="row g-4">
+
+        <!-- STEP 01 - Set up your wallet -->
+        <div class="col-lg-3 col-md-6">
+            <div style="background: #1a1c25; padding: 40px 30px; border-radius: 16px; border: 1px solid #2a2d3a; transition: 0.3s; cursor: pointer; height: 100%;">
+                
+                <!-- Icon -->
+                <div style="position: relative; margin-bottom: 30px;">
+                    <p style="color: #6b7280; font-size: 14px; font-weight: 600; margin-bottom: 20px;">STEP-01</p>
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #84cc16, #22c55e); border-radius: 16px; display: flex; align-items: center; justify-content: center; position: relative; box-shadow: 0 8px 20px rgba(132, 204, 22, 0.3);">
+                        <i class="bi bi-wallet2" style="font-size: 36px; color: white;"></i>
+                        <div style="position: absolute; top: -8px; right: -8px; width: 24px; height: 24px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            ✨
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <h4 class="text-white fw-bold mb-3">Set up your wallet</h4>
+                <p style="color: #9ca3af; font-size: 15px; line-height: 1.7; margin-bottom: 30px;">
+                    Powerful features and inclusions, which makes Nuron standout, easily customizable and scalable.
+                </p>
+
+                <!-- Arrow -->
+                <i class="bi bi-arrow-right" style="color: #6b7280; font-size: 24px;"></i>
+
+            </div>
+        </div>
+
+        <!-- STEP 02 - Create your collection -->
+        <div class="col-lg-3 col-md-6">
+            <div style="background: #1a1c25; padding: 40px 30px; border-radius: 16px; border: 1px solid #2a2d3a; transition: 0.3s; cursor: pointer; height: 100%;">
+                
+                <!-- Icon -->
+                <div style="position: relative; margin-bottom: 30px;">
+                    <p style="color: #6b7280; font-size: 14px; font-weight: 600; margin-bottom: 20px;">STEP-02</p>
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #ec4899, #f97316); border-radius: 16px; display: flex; align-items: center; justify-content: center; position: relative; box-shadow: 0 8px 20px rgba(236, 72, 153, 0.3);">
+                        <div style="width: 40px; height: 50px; background: linear-gradient(135deg, #fbbf24, #f59e0b); border-radius: 8px 8px 20px 20px;"></div>
+                        <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 3px;">
+                            <div style="width: 6px; height: 6px; background: #fbbf24; border-radius: 50%;"></div>
+                            <div style="width: 6px; height: 6px; background: #f59e0b; border-radius: 50%;"></div>
+                            <div style="width: 6px; height: 6px; background: #ef4444; border-radius: 50%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <h4 class="text-white fw-bold mb-3">Create your collection</h4>
+                <p style="color: #9ca3af; font-size: 15px; line-height: 1.7; margin-bottom: 30px;">
+                    A great collection of beautiful website templates for your need. Choose the best suitable template.
+                </p>
+
+                <!-- Arrow -->
+                <i class="bi bi-arrow-right" style="color: #6b7280; font-size: 24px;"></i>
+
+            </div>
+        </div>
+
+        <!-- STEP 03 - Add your NFT's -->
+        <div class="col-lg-3 col-md-6">
+            <div style="background: #1a1c25; padding: 40px 30px; border-radius: 16px; border: 1px solid #2a2d3a; transition: 0.3s; cursor: pointer; height: 100%;">
+                
+                <!-- Icon -->
+                <div style="position: relative; margin-bottom: 30px;">
+                    <p style="color: #6b7280; font-size: 14px; font-weight: 600; margin-bottom: 20px;">STEP-03</p>
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6366f1, #3b82f6); border-radius: 16px; display: flex; align-items: center; justify-content: center; position: relative; box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);">
+                        <div style="width: 50px; height: 50px; background: white; border-radius: 8px; position: relative; overflow: hidden;">
+                            <div style="position: absolute; width: 20px; height: 20px; background: linear-gradient(135deg, #a855f7, #ec4899); border-radius: 50%; top: 5px; left: 5px;"></div>
+                        </div>
+                        <div style="position: absolute; bottom: 8px; right: 8px; width: 20px; height: 20px; background: #ec4899; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; font-weight: bold;">
+                            +
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <h4 class="text-white fw-bold mb-3">Add your NFT's</h4>
+                <p style="color: #9ca3af; font-size: 15px; line-height: 1.7; margin-bottom: 30px;">
+                    We've made the template fully responsive, so it looks great on all devices: desktop, tablets and.
+                </p>
+
+                <!-- Arrow -->
+                <i class="bi bi-arrow-right" style="color: #6b7280; font-size: 24px;"></i>
+
+            </div>
+        </div>
+
+        <!-- STEP 04 - Sell Your NFT's -->
+        <div class="col-lg-3 col-md-6">
+            <div style="background: #1a1c25; padding: 40px 30px; border-radius: 16px; border: 1px solid #2a2d3a; transition: 0.3s; cursor: pointer; height: 100%;">
+                
+                <!-- Icon -->
+                <div style="position: relative; margin-bottom: 30px;">
+                    <p style="color: #6b7280; font-size: 14px; font-weight: 600; margin-bottom: 20px;">STEP-04</p>
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #06b6d4, #3b82f6); border-radius: 16px; display: flex; align-items: center; justify-content: center; position: relative; box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);">
+                        <div style="width: 50px; height: 50px; border: 4px solid white; border-radius: 50%; position: relative;">
+                            <div style="position: absolute; width: 20px; height: 20px; background: white; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <h4 class="text-white fw-bold mb-3">Sell Your NFT's</h4>
+                <p style="color: #9ca3af; font-size: 15px; line-height: 1.7; margin-bottom: 30px;">
+                    I throw myself down among the tall grass by the stream as I lie close to the earth NFT's.
+                </p>
+
+                <!-- Arrow -->
+                <i class="bi bi-arrow-right" style="color: #6b7280; font-size: 24px;"></i>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+    /* Step Card Hover Effect */
+    [style*="background: #1a1c25; padding: 40px 30px"]:hover {
+        transform: translateY(-8px);
+        border-color: #0a84ff !important;
+        box-shadow: 0 12px 24px rgba(10, 132, 255, 0.15);
+    }
+
+    /* Arrow Hover Effect */
+    [style*="background: #1a1c25; padding: 40px 30px"]:hover .bi-arrow-right {
+        color: #0a84ff !important;
+        transform: translateX(5px);
+        transition: 0.3s;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Seller</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #14141f;
+            color: #ffffff;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .header h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .dropdown {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #00d4ff;
+            font-size: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .dropdown-arrow {
+            font-size: 1.2rem;
+        }
+
+        .sellers-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+            row-gap: 40px;
+        }
+
+        .seller-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: #1a1a2e;
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .seller-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .rank {
+            position: absolute;
+            top: -10px;
+            right: 15px;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2a2a3e;
+            z-index: 1;
+        }
+
+        .avatar-wrapper {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .verified {
+            position: absolute;
+            bottom: -2px;
+            right: -2px;
+            width: 20px;
+            height: 20px;
+            background-color: #00d4ff;
+            border-radius: 50%;
+            border: 2px solid #1a1a2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #ffffff;
+        }
+
+        .seller-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .seller-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .seller-price {
+            font-size: 0.95rem;
+            color: #8a8aa0;
+        }
+
+        @media (max-width: 1200px) {
+            .sellers-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .sellers-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sellers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .header h2 {
+                font-size: 1.5rem;
+            }
+
+            .dropdown {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sellers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Top Seller in</h2>
+            <div class="dropdown">
+                <span>1 day</span>
+                <span class="dropdown-arrow">⌄</span>
+            </div>
+        </div>
+
+        <div class="sellers-grid">
+            <!-- Seller 1 -->
+            <div class="seller-card">
+                <span class="rank">1</span>
+                <div class="avatar-wrapper">
+                    <img src="https://i.pravatar.cc/150?img=1" alt="Brodband" class="avatar">
+                    <div class="verified">✓</div>
+                </div>
+                <div class="seller-info">
+                    <div class="seller-name">Brodband</div>
+                    <div class="seller-price">$2500,000</div>
+                </div>
+            </div>
+
+            <!-- Seller 2 -->
+            <div class="seller-card">
+                <span class="rank">2</span>
+                <div class="avatar-wrapper">
+                    <img src="https://i.pravatar.cc/150?img=5" alt="Ms. Parkline" class="avatar">
+                </div>
+                <div class="seller-info">
+                    <div class="seller-name">Ms. Parkline</div>
+                    <div class="seller-price">$2300,000</div>
+                </div>
+            </div>
+
+            <!-- Seller 3 -->
+            <div class="seller-card">
+                <span class="rank">3</span>
+                <div class="avatar-wrapper">
+                    <img src="https://i.pravatar.cc/150?img=8" alt="Methods" class="avatar">
+                </div>
+                <div class="seller-info">
+                    <div class="seller-name">Methods</div>
+                    <div class="seller-price">$2100,000</div>
+                </div>
+            </div>
+
+            <!-- Seller 4 -->
+            <div class="seller-card">
+                <span class="rank">4</span>
+                <div class="avatar-wrapper">
+                    <img src="https://i.pravatar.cc/150?img=12" alt="Jone sone" class="avatar">
+                    <div class="verified">✓</div>
+                </div>
+                <div class="seller-info">
+                    <div class="seller-name">Jone sone</div>
+                    <div class="seller-price">$2000,000</div>
+                </div>
+            </div>
+
+            <!-- Seller 5 -->
+            <div class="seller-card">
+                <span class="rank">5</span>
+                <div class="avatar-wrapper">
+                    <img src="https://i.pravatar.cc/150?img=15" alt="Siddhart" class="avatar">
+                </div>
+                <div class="seller-info">
+                    <div class="seller-name">Siddhart</div>
+                    <div class="seller-price">$200,000</div>
+                </div>
+            </div>
+
+            <!-- Seller 6 -->
+            <div class="seller-card">
+                <span class="rank">6</span>
+                <div class="avatar-wrapper">
+                    <img src="https://i.pravatar.cc/150?img=20" alt="Sobuj Mk" class="avatar">
+                    <div class="verified">✓</div>
+                </div>
+                <div class="seller-info">
+                    <div class="seller-name">Sobuj Mk</div>
+                    <div class="seller-price">$2000,000</div>
+                </div>
+            </div>
+
+            <!-- Seller 7 -->
+            <div class="seller-card">
+                <span class="rank">7</span>
+                <div class="avatar-wrapper">
+                    <img src="https://i.pravatar.cc/150?img=25" alt="Trodband" class="avatar">
+                    <div class="verified">✓</div>
+                </div>
+                <div class="seller-info">
+                    <div class="seller-name">Trodband</div>
+                    <div class="seller-price">$2500,000</div>
+                </div>
+            </div>
+
+            <!-- Seller 8 -->
+            <div class="seller-card">
+                <span class="rank">8</span>
+                <div class="avatar-wrapper">
+                    <img src="https://i.pravatar.cc/150?img=30" alt="Yash" class="avatar">
+                </div>
+                <div class="seller-info">
+                    <div class="seller-name">Yash</div>
+                    <div class="seller-price">$2500,000</div>
+                </div>
+            </div>
+
+            <!-- Seller 9 -->
+            <div class="seller-card">
+                <span class="rank">9</span>
+                <div class="avatar-wrapper">
+                    <img src="https://i.pravatar.cc/150?img=35" alt="YASHKIB" class="avatar">
+                </div>
+                <div class="seller-info">
+                    <div class="seller-name">YASHKIB</div>
+                    <div class="seller-price">$2500,000</div>
+                </div>
+            </div>
+
+            <!-- Seller 10 -->
+            <div class="seller-card">
+                <span class="rank">10</span>
+                <div class="avatar-wrapper">
+                    <img src="https://i.pravatar.cc/150?img=40" alt="Brodband" class="avatar">
+                    <div class="verified">✓</div>
+                </div>
+                <div class="seller-info">
+                    <div class="seller-name">Brodband</div>
+                    <div class="seller-price">$2500,000</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- CAROUSEL -->
+<!-- FIND YOUR NON REPLACEABLE TOKEN -->
+<div class="container mt-5">
+    <h2 class="text-white fw-bold mb-5">Find Your Non Replaceable Token</h2>
+    
+    <div class="row">
+        
+        <!-- SOL SIDEBAR -->
+        <div class="col-lg-3 mb-4">
+            
+            <!-- Sort By -->
+            <div class="filter-box mb-4">
+                <h5 class="text-white fw-bold mb-4">Sort By</h5>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="newest" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="newest">Newest</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="oldest" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="oldest">Oldest</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="popular" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="popular">Popular Courses</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="featured" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="featured">Featured On This Month</label>
+                </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="filter-box mb-4">
+                <h5 class="text-white fw-bold mb-4">Categories</h5>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="art" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="art">
+                        Art & Design <span style="color: #8a8aa0;">(24)</span>
+                    </label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="webdev" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="webdev">
+                        Web Development <span style="color: #8a8aa0;">(12)</span>
+                    </label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="business" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="business">
+                        Business Management <span style="color: #8a8aa0;">(8)</span>
+                    </label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="marketing" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="marketing">
+                        Digital Marketing <span style="color: #8a8aa0;">(3)</span>
+                    </label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="music" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="music">
+                        Music & Fashion <span style="color: #8a8aa0;">(13)</span>
+                    </label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="financial" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="financial">
+                        Financial Management <span style="color: #8a8aa0;">(25)</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="sports" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="sports">
+                        Sports <span style="color: #8a8aa0;">(19)</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Level -->
+            <div class="filter-box mb-4">
+                <h5 class="text-white fw-bold mb-4">Level</h5>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="allskill" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="allskill">All Skill</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="beginner" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="beginner">Beginner</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="intermediate" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="intermediate">Intermediate</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="high" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="high">High</label>
+                </div>
+            </div>
+
+            <!-- Price -->
+            <div class="filter-box">
+                <h5 class="text-white fw-bold mb-4">Price</h5>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="allprices" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="allprices">All Prices</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="lowtohigh" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="lowtohigh">Price: Low to High</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="hightolow" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="hightolow">Price: High to Low</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="freepaid" style="background: #2a2d3a; border: 1px solid #3a3d4a;">
+                    <label class="form-check-label text-white" for="freepaid">Free Paid</label>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- NFT CARDS -->
+        <div class="col-lg-9">
+            <div class="row">
+
+                <!-- Card 1 - mAtal8 -->
+                <div class="col-md-4 mb-4">
+                    <div class="nft-card">
+                        <div style="position: relative;">
+                            <img src="https://picsum.photos/id/1018/400/400" style="width: 100%; height: 280px; object-fit: cover;">
+                            <div style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); padding: 6px 12px; border-radius: 20px;">
+                                <span style="color: white; font-size: 12px; font-weight: 500;">21+ Place Bit.</span>
+                            </div>
+                        </div>
+                        <div style="padding: 20px;">
+                            <div class="d-flex align-items-center mb-3">
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #ff6b6b, #ee5a6f); border-radius: 50%; margin-right: -8px; border: 2px solid #1a1c25;"></div>
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #4facfe, #00f2fe); border-radius: 50%; margin-right: -8px; border: 2px solid #1a1c25;"></div>
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #43e97b, #38f9d7); border-radius: 50%; border: 2px solid #1a1c25;"></div>
+                                <button style="background: transparent; border: none; color: white; font-size: 20px; margin-left: auto;">⋯</button>
+                            </div>
+                            <h5 class="text-white fw-bold mb-2">mAtal8</h5>
+                            <p style="color: #8a8aa0; font-size: 14px; margin-bottom: 16px;">Highest bid 1/20</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span style="color: #0a84ff; font-weight: 600; font-size: 16px;">0.244wETH</span>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-heart" style="color: #8a8aa0; margin-right: 6px;"></i>
+                                    <span style="color: #8a8aa0; font-size: 14px;">322</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 - PlatOrgan -->
+                <div class="col-md-4 mb-4">
+                    <div class="nft-card">
+                        <div style="position: relative;">
+                            <div style="width: 100%; height: 280px; background: linear-gradient(135deg, #2c3e50, #3d5a6b); display: flex; align-items: center; justify-content: center;">
+                                <div style="width: 140px; height: 140px; background: linear-gradient(135deg, #8b6914, #a87c1a); transform: rotateX(60deg) rotateZ(45deg); position: relative;">
+                                    <div style="position: absolute; width: 40px; height: 40px; background: #ffeb3b; border-radius: 50%; top: -20px; left: 50px;"></div>
+                                    <div style="position: absolute; width: 40px; height: 40px; background: #ffeb3b; border-radius: 50%; bottom: 20px; left: -10px;"></div>
+                                </div>
+                            </div>
+                            <div style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); padding: 6px 12px; border-radius: 20px;">
+                                <span style="color: white; font-size: 12px; font-weight: 500;">12+ Place Bit.</span>
+                            </div>
+                        </div>
+                        <div style="padding: 20px;">
+                            <div class="d-flex align-items-center mb-3">
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; margin-right: -8px; border: 2px solid #1a1c25;"></div>
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 50%; margin-right: -8px; border: 2px solid #1a1c25;"></div>
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #fbc2eb, #a6c1ee); border-radius: 50%; border: 2px solid #1a1c25;"></div>
+                                <button style="background: transparent; border: none; color: white; font-size: 20px; margin-left: auto;">⋯</button>
+                            </div>
+                            <h5 class="text-white fw-bold mb-2">PlatOrgan</h5>
+                            <p style="color: #8a8aa0; font-size: 14px; margin-bottom: 16px;">Highest bid 1/20</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span style="color: #0a84ff; font-weight: 600; font-size: 16px;">0.244wETH</span>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-heart" style="color: #8a8aa0; margin-right: 6px;"></i>
+                                    <span style="color: #8a8aa0; font-size: 14px;">322</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 - Orthogon#720 -->
+                <div class="col-md-4 mb-4">
+                    <div class="nft-card">
+                        <div style="position: relative;">
+                            <div style="width: 100%; height: 280px; background: linear-gradient(135deg, #1a0033, #2d0052); display: flex; align-items: center; justify-content: center;">
+                                <div style="width: 120px; height: 160px; background: linear-gradient(135deg, #6366f1, #ec4899); border-radius: 60px 60px 80px 80px; position: relative; overflow: hidden;">
+                                    <div style="position: absolute; width: 100%; height: 50%; background: linear-gradient(135deg, #3b82f6, #8b5cf6); top: 0;"></div>
+                                </div>
+                            </div>
+                            <div style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); padding: 6px 12px; border-radius: 20px;">
+                                <span style="color: white; font-size: 12px; font-weight: 500;">5+ Place Bit.</span>
+                            </div>
+                        </div>
+                        <div style="padding: 20px;">
+                            <div class="d-flex align-items-center mb-3">
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #fa709a, #fee140); border-radius: 50%; margin-right: -8px; border: 2px solid #1a1c25;"></div>
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #30cfd0, #330867); border-radius: 50%; margin-right: -8px; border: 2px solid #1a1c25;"></div>
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #a8edea, #fed6e3); border-radius: 50%; border: 2px solid #1a1c25;"></div>
+                                <button style="background: transparent; border: none; color: white; font-size: 20px; margin-left: auto;">⋯</button>
+                            </div>
+                            <h5 class="text-white fw-bold mb-2">Orthogon#720</h5>
+                            <p style="color: #8a8aa0; font-size: 14px; margin-bottom: 16px;">Highest bid 1/20</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span style="color: #0a84ff; font-weight: 600; font-size: 16px;">0.244wETH</span>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-heart" style="color: #8a8aa0; margin-right: 6px;"></i>
+                                    <span style="color: #8a8aa0; font-size: 14px;">322</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="nft-card">
+                        <div style="position: relative;">
+                            <div style="width: 100%; height: 280px; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); display: flex; align-items: center; justify-content: center;">
+                            </div>
+                            <div style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); padding: 6px 12px; border-radius: 20px;">
+                                <span style="color: white; font-size: 12px; font-weight: 500;">15+ Place Bit.</span>
+                            </div>
+                        </div>
+                        <div style="padding: 20px;">
+                            <div class="d-flex align-items-center mb-3">
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #ff6b6b, #ee5a6f); border-radius: 50%; margin-right: -8px; border: 2px solid #1a1c25;"></div>
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #4facfe, #00f2fe); border-radius: 50%; margin-right: -8px; border: 2px solid #1a1c25;"></div>
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #43e97b, #38f9d7); border-radius: 50%; border: 2px solid #1a1c25;"></div>
+                                <button style="background: transparent; border: none; color: white; font-size: 20px; margin-left: auto;">⋯</button>
+                            </div>
+                            <h5 class="text-white fw-bold mb-2">Abstract Art</h5>
+                            <p style="color: #8a8aa0; font-size: 14px; margin-bottom: 16px;">Highest bid 1/20</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span style="color: #0a84ff; font-weight: 600; font-size: 16px;">0.244wETH</span>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-heart" style="color: #8a8aa0; margin-right: 6px;"></i>
+                                    <span style="color: #8a8aa0; font-size: 14px;">322</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-md-4 mb-4">
+                    <div class="nft-card">
+                        <div style="position: relative;">
+                            <div style="width: 100%; height: 280px; background: linear-gradient(135deg, #2c3e50, #3d5a6b); display: flex; align-items: center; justify-content: center;">
+                                <div style="width: 140px; height: 140px; background: linear-gradient(135deg, #8b6914, #a87c1a); transform: rotateX(60deg) rotateZ(45deg); position: relative;">
+                                    <div style="position: absolute; width: 40px; height: 40px; background: #ffeb3b; border-radius: 50%; top: -20px; left: 50px;"></div>
+                                    <div style="position: absolute; width: 40px; height: 40px; background: #ffeb3b; border-radius: 50%; bottom: 20px; left: -10px;"></div>
+                                </div>
+                            </div>
+                            <div style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); padding: 6px 12px; border-radius: 20px;">
+                                <span style="color: white; font-size: 12px; font-weight: 500;">8+ Place Bit.</span>
+                            </div>
+                        </div>
+                        <div style="padding: 20px;">
+                            <div class="d-flex align-items-center mb-3">
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; margin-right: -8px; border: 2px solid #1a1c25;"></div>
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 50%; margin-right: -8px; border: 2px solid #1a1c25;"></div>
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #fbc2eb, #a6c1ee); border-radius: 50%; border: 2px solid #1a1c25;"></div>
+                                <button style="background: transparent; border: none; color: white; font-size: 20px; margin-left: auto;">⋯</button>
+                            </div>
+                            <h5 class="text-white fw-bold mb-2">Cube Vision</h5>
+                            <p style="color: #8a8aa0; font-size: 14px; margin-bottom: 16px;">Highest bid 1/20</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span style="color: #0a84ff; font-weight: 600; font-size: 16px;">0.244wETH</span>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-heart" style="color: #8a8aa0; margin-right: 6px;"></i>
+                                    <span style="color: #8a8aa0; font-size: 14px;">322</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-md-4 mb-4">
+                    <div class="nft-card">
+                        <div style="position: relative;">
+                            <div style="width: 100%; height: 280px; background: linear-gradient(135deg, #ffd700, #ffed4e); display: flex; align-items: center; justify-content: center;">
+                                <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #dc143c, #8b0000); border-radius: 50%; position: relative; overflow: hidden;">
+                                    <div style="position: absolute; width: 100%; height: 50%; background: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22><text y=%2250%22 font-size=%2260%22>🧠</text></svg>'); background-size: cover; top: 0;"></div>
+                                </div>
+                            </div>
+                            <div style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); padding: 6px 12px; border-radius: 20px;">
+                                <span style="color: white; font-size: 12px; font-weight: 500;">18+ Place Bit.</span>
+                            </div>
+                        </div>
+                        <div style="padding: 20px;">
+                            <div class="d-flex align-items-center mb-3">
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #fa709a, #fee140); border-radius: 50%; margin-right: -8px; border: 2px solid #1a1c25;"></div>
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #30cfd0, #330867); border-radius: 50%; margin-right: -8px; border: 2px solid #1a1c25;"></div>
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #a8edea, #fed6e3); border-radius: 50%; border: 2px solid #1a1c25;"></div>
+                                <button style="background: transparent; border: none; color: white; font-size: 20px; margin-left: auto;">⋯</button>
+                            </div>
+                            <h5 class="text-white fw-bold mb-2">Brain Power</h5>
+                            <p style="color: #8a8aa0; font-size: 14px; margin-bottom: 16px;">Highest bid 1/20</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span style="color: #0a84ff; font-weight: 600; font-size: 16px;">0.244wETH</span>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-heart" style="color: #8a8aa0; margin-right: 6px;"></i>
+                                    <span style="color: #8a8aa0; font-size: 14px;">322</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer style="background: #1a1c25; padding: 60px 0 20px 0; margin-top: 80px;">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Sol tərəf - Logo və Subscribe -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="d-flex align-items-center mb-3">
+          <div style="background:#0a84ff; padding:8px 14px; border-radius:14px; font-weight:700; font-size:22px;">
+            N
+          </div>
+          <span class="ms-2 text-white fw-bold" style="font-size:22px;">nuron</span>
+        </div>
+        <p style="color: #8a8aa0; font-size: 14px; line-height: 1.7;">
+          Created with the collaboration of over 60 of the world's best Nuron Artists.
+        </p>
+        
+        <h6 class="text-white fw-bold mt-4 mb-3">Get The Latest Nuron Updates</h6>
+        <div class="d-flex">
+          <input type="text" class="form-control" placeholder="Your username" 
+                 style="background: #0f111a; border: 1px solid #2a2d3a; color: white; border-radius: 8px 0 0 8px;">
+          <button class="btn btn-primary" style="background: #2a2d3a; border: none; border-radius: 0 8px 8px 0; padding: 0 24px;">
+            Subscribe
+          </button>
+        </div>
+        <small style="color: #6b6b7b; font-size: 12px;">Email is safe. We don't spam.</small>
+      </div>
+
+      <!-- Nuron -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h6 class="text-white fw-bold mb-3">Nuron</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#" style="color: #8a8aa0; text-decoration: none; font-size: 14px;">Protocol Explore</a></li>
+          <li class="mb-2"><a href="#" style="color: #8a8aa0; text-decoration: none; font-size: 14px;">System Token</a></li>
+          <li class="mb-2"><a href="#" style="color: #8a8aa0; text-decoration: none; font-size: 14px;">Otimize Time</a></li>
+          <li class="mb-2"><a href="#" style="color: #8a8aa0; text-decoration: none; font-size: 14px;">Visual Checking</a></li>
+          <li class="mb-2"><a href="#" style="color: #8a8aa0; text-decoration: none; font-size: 14px;">Fadeup System</a></li>
+          <li class="mb-2"><a href="#" style="color: #8a8aa0; text-decoration: none; font-size: 14px;">Activity Log</a></li>
+          <li class="mb-2"><a href="#" style="color: #8a8aa0; text-decoration: none; font-size: 14px;">System Auto Since</a></li>
+        </ul>
+      </div>
+
+      <!-- Information -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h6 class="text-white fw-bold mb-3">Information</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#" style="color: #8a8aa0; text-decoration: none; font-size: 14px;">Market Explore</a></li>
+          <li class="mb-2"><a href="#" style="color: #8a8aa0; text-decoration: none; font-size: 14px;">Ready Token</a></li>
+          <li class="mb-2"><a href="#" style="color: #8a8aa0; text-decoration: none; font-size: 14px;">Main Option</a></li>
+          <li class="mb-2"><a href="#" style="color: #8a8aa0; text-decoration: none; font-size: 14px;">Product Checking</a></li>
+          <li class="mb-2"><a href="#" style="color: #8a8aa0; text-decoration: none; font-size: 14px;">Blog Grid</a></li>
+          <li class="mb-2"><a href="#" style="color: #8a8aa0; text-decoration: none; font-size: 14px;">About Us</a></li>
+          <li class="mb-2"><a href="#" style="color: #8a8aa0; text-decoration: none; font-size: 14px;">Fix Bug</a></li>
+        </ul>
+      </div>
+
+      <!-- Recent Sold Out -->
+      <div class="col-lg-5 col-md-6 mb-4">
+        <h6 class="text-white fw-bold mb-3">Recent Sold Out</h6>
+        
+        <!-- Item 1 -->
+        <div class="d-flex align-items-center mb-3 p-3" style="background: #0f111a; border-radius: 12px;">
+          <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #e91e63, #ff9800); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+            🐧
+          </div>
+          <div class="ms-3 flex-grow-1">
+            <h6 class="text-white mb-1" style="font-size: 14px; font-weight: 600;">#21 The Wonder</h6>
+            <small style="color: #6b6b7b; font-size: 12px;">Highest bid 1/20</small>
+          </div>
+          <div class="text-end">
+            <span style="color: #0a84ff; font-weight: 600; font-size: 14px;">0.244wETH</span>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="d-flex align-items-center mb-3 p-3" style="background: #0f111a; border-radius: 12px;">
+          <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00bcd4, #2196f3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+            ▶️
+          </div>
+          <div class="ms-3 flex-grow-1">
+            <h6 class="text-white mb-1" style="font-size: 14px; font-weight: 600;">Diamond Dog</h6>
+            <small style="color: #6b6b7b; font-size: 12px;">Highest bid 1/20</small>
+          </div>
+          <div class="text-end">
+            <span style="color: #0a84ff; font-weight: 600; font-size: 14px;">0.022wETH</span>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="d-flex align-items-center p-3" style="background: #0f111a; border-radius: 12px;">
+          <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00e5ff, #00b8d4); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+            🏎️
+          </div>
+          <div class="ms-3 flex-grow-1">
+            <h6 class="text-white mb-1" style="font-size: 14px; font-weight: 600;">Morgan11</h6>
+            <small style="color: #6b6b7b; font-size: 12px;">Highest bid 1/20</small>
+          </div>
+          <div class="text-end">
+            <span style="color: #0a84ff; font-weight: 600; font-size: 14px;">0.892wETH</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Alt hissə - Copyright və Social -->
+    <div class="row mt-5 pt-4" style="border-top: 1px solid #2a2d3a;">
+      <div class="col-md-6 mb-3">
+        <p style="color: #6b6b7b; font-size: 14px; margin: 0;">
+          ©2022 Nuron, Inc. All rights reserved.
+          <a href="#" style="color: #8a8aa0; text-decoration: none; margin-left: 20px;">Terms</a>
+          <span style="color: #6b6b7b; margin: 0 8px;">·</span>
+          <a href="#" style="color: #8a8aa0; text-decoration: none;">Privacy Policy</a>
+        </p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a href="#" class="me-3" style="color: #8a8aa0; font-size: 18px;"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="me-3" style="color: #8a8aa0; font-size: 18px;"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="me-3" style="color: #8a8aa0; font-size: 18px;"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="me-3" style="color: #8a8aa0; font-size: 18px;"><i class="bi bi-linkedin"></i></a>
+        <a href="#" style="color: #8a8aa0; font-size: 18px;"><i class="bi bi-envelope"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <div style="position: fixed; bottom: 30px; right: 30px; z-index: 1000;">
+    <a href="#" style="display: flex; flex-direction: column; align-items: center; text-decoration: none;">
+      <div style="width: 54px; height: 54px; background: #0a84ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(10, 132, 255, 0.5); transition: 0.3s;">
+        <i class="bi bi-arrow-up" style="color: white; font-size: 24px; font-weight: bold;"></i>
+      </div>
+      <span style="color: white; font-size: 11px; font-weight: 600; margin-top: 6px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Back to Top</span>
+    </a>
+  </div>
+</footer>   
+    
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
